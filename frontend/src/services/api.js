@@ -1,0 +1,12 @@
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "http://localhost:5000/api",
+});
+
+export const getDashboard = () => API.get("/dashboard");
+
+export const generateTimetable = (config) =>
+  API.post("/generate", config);
+
+
